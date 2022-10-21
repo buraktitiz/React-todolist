@@ -43,4 +43,4 @@ function List({todoList, setTodoList, hide}) {
     )
 }
 
-export default List
+export default List;

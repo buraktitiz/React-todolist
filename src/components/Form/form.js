@@ -6,12 +6,12 @@ function Form({todoList, setTodoList}) {
         name: '',
     });
 
-    const handleChange = (e) => {
-        setTodoItem({ name: e.target.value, status: false, id: (todoList.length + 1).toString() })
+    const handleChange = (event) => {
+        setTodoItem({ name: event.target.value, status: false, id: (todoList.length + 1).toString() })
     }
 
-    const handleSubmit = (e) => {
-        e.preDefault();
+    const handleSubmit = (event) => {
+        event.preventDefault();
         setTodoList([...todoList, todoItem])
         setTodoItem({ status: false, name: '' })
     }
